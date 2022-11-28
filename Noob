@@ -1,0 +1,348 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+local Window = Library.CreateLib("Aliyaan", "BloodTheme")
+
+--Main
+
+local Main = Window:NewTab("Main")
+
+local MainSection = Main:NewSection("Main hacks")
+
+MainSection:NewButton("brookhaven🏘️", "Brookhaven🏘️", function()
+
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMael7/NewIceHub/main/Brookhaven"))()
+
+ end)
+
+MainSection:NewButton("adopt me🐱", " adopt me🐱", function()
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+
+end)
+
+MainSection:NewButton("evade", "evade", function()
+
+   loadstring(game:HttpGet('http://vendettahub.xyz/Vendetta/Vendetta.v3'))()
+
+end)
+
+MainSection:NewButton("king legacy", "king legacy", function()
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/xOne2/King-Legacy/main/README.md"))()
+
+end)
+
+MainSection:NewButton("DOORS🚪", "Doors 🚪", function()
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Darkrai-X/main/Games/Doors"))()
+
+end)
+
+MainSection:NewButton("Arsenal🔫", "Arsenal🔫", function()
+
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Maikderninja/Maikderninja/main/PWNERHUB.lua"))();
+
+end)
+
+MainSection:NewButton("bee swarm sim🐝", "bee swarm sim 🐝", function()
+
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/AltsegoD/script/master/BeeSwarmSimulator.lua')))()
+
+end)
+
+MainSection:NewButton("BedWars 🛏️", "Bedwars 🛏️", function()
+
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+
+end)
+
+MainSection:NewButton("Keyboard ⌨️", "Keyboard ⌨️", function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
+
+end)
+
+MainSection:NewButton("Auto piano 🎹", "Auto piano 🎹", function()
+
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/Madness676/FixedPianoV2/main/Pandaexploits.lua", true))()
+
+end)
+
+MainSection:NewButton("slap battle👋", "slapbattle 👋", function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/dizyhvh/slap_battles_gui/main/0.lua"))()
+
+end)
+
+MainSection:NewButton("Blox burg🏠", "Blox burg🏠", function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/PainfulDestroyer/Roblox/main/Scar%20Hub"))()
+
+end)
+
+MainSection:NewButton("Kat", "Kat🔪", function()
+
+  local Camera = game:GetService("Workspace").CurrentCamera
+
+local Players = game:GetService("Players")
+
+local LocalPlayer = game:GetService("Players").LocalPlayer
+
+local function GetClosestPlayer()
+
+   local ClosestPlayer = nil
+
+   local FarthestDistance = math.huge
+
+   for i, v in pairs(Players.GetPlayers(Players)) do
+
+       if v ~= LocalPlayer and v.Character and v.Character.FindFirstChild(v.Character, "HumanoidRootPart") then
+
+           local DistanceFromPlayer = (LocalPlayer.Character.HumanoidRootPart.Position - v.Character.HumanoidRootPart.Position).Magnitude
+
+           if DistanceFromPlayer < FarthestDistance then
+
+               FarthestDistance = DistanceFromPlayer
+
+               ClosestPlayer = v
+
+           end
+
+       end
+
+   end
+
+   if ClosestPlayer then
+
+       return ClosestPlayer
+
+   end
+
+end
+
+local GameMetaTable = getrawmetatable(game)
+
+local OldGameMetaTableNamecall = GameMetaTable.__namecall
+
+setreadonly(GameMetaTable, false)
+
+GameMetaTable.__namecall = newcclosure(function(object, ...)
+
+   local NamecallMethod = getnamecallmethod()
+
+   local Arguments = {...}
+
+   if tostring(NamecallMethod) == "FindPartOnRayWithIgnoreList" then
+
+       local ClosestPlayer = GetClosestPlayer()
+
+       
+
+       if ClosestPlayer and ClosestPlayer.Character then
+
+           Arguments[1] = Ray.new(Camera.CFrame.Position, (ClosestPlayer.Character.Head.Position - Camera.CFrame.Position).Unit * (Camera.CFrame.Position - ClosestPlayer.Character.Head.Position).Magnitude)
+
+       end
+
+   end
+
+   return OldGameMetaTableNamecall(object, unpack(Arguments))
+
+end)
+
+setreadonly(GameMetaTable, true)
+
+end)
+
+MainSection:NewButton("Da hood☠️", "Da hood☠️", function()
+
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/NighterEpic/Faded/main/YesEpic", true))()
+
+end)
+
+MainSection:NewButton("shindo life ", "shindo life", function()
+
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/XDima2/XDima2/main/RaumHub"))()
+
+end)
+
+MainSection:NewButton("Rainbow friends🌈", "Rainbow friends🌈 ", function()
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Sempiller/RainbowTool/main/Turkish.lua'))()
+
+end)
+
+MainSection:NewButton("combat warrior🪖", "combat warrior 🪖", function()
+
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/SussyImposterRed/Scripts/main/NEW_NOVA"))()
+
+end)
+
+MainSection:NewButton("pop it trading", "pop it trading", function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/PikachuHack/BackBencher-Hub-Private-/main/BackBencher%20Hub%5BPrivate%5D"))()
+
+end)
+
+    
+
+--Credits
+
+local Credits = Window:NewTab("Credits")
+
+local CreditsSection = Credits:NewSection("Credits")
+
+CreditsSection:NewLabel("Credits to Alex")
+
+--Other
+
+local Other = Window:NewTab("others")
+
+local OtherSection = Other:NewSection("others")
+
+OtherSection:NewButton("Infinite Yield", "Give you infinite yield script.", function()
+
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+
+    end)
+
+    
+
+    OtherSection:NewSlider("Walkspeed", "Changes how fast you walk.", 250, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
+
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+
+    end)
+
+OtherSection:NewSlider("JumpPower", "Changes how fast you jump.", 250, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
+
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+
+    end)
+
+MainSection:NewButton("prison life", "prison life admin", function()
+
+ loadstring(game:HttpGet(('https://raw.githubusercontent.com/XTheMasterX/Scripts/Main/PrisonLife'),true))()
+
+end)
+
+MainSection:NewButton("survive the killer 🗡️", "survive the killer gui", function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/MiloHaxx/ChairWare/main/Games/SurviveTheKiller.lua", true))()
+
+end)
+
+OtherSection:NewButton("Fly ", "let u fly", function()
+
+loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\39\104\116\116\112\115\58\47\47\103\105\115\116\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\109\101\111\122\111\110\101\89\84\47\98\102\48\51\55\100\102\102\57\102\48\97\55\48\48\49\55\51\48\52\100\100\100\54\55\102\100\99\100\51\55\48\47\114\97\119\47\101\49\52\101\55\52\102\52\50\53\98\48\54\48\100\102\53\50\51\51\52\51\99\102\51\48\98\55\56\55\48\55\52\101\98\51\99\53\100\50\47\97\114\99\101\117\115\37\50\53\50\48\120\37\50\53\50\48\102\108\121\37\50\53\50\48\50\37\50\53\50\48\111\98\102\108\117\99\97\116\111\114\39\41\44\116\114\117\101\41\41\40\41\10\10")()
+
+end)
+
+OtherSection:NewButton("finger", "finger", function()
+
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/Traphood86/Finger-script-v2-/main/finger.txt"))();
+
+end)
+
+OtherSection:NewButton("Admin", "Admin commands", function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+
+end)
+
+MainSection:NewButton("[🐯🍩UPDATE] Blox Fruits", "ButtonInfo", function()
+
+ loadstring(game:HttpGet('https://raw.githubusercontent.com/KindIhave/ChibaHubcomeback/main/Chibacomebackbeta.txt'))()
+
+end)
+
+MainSection:NewButton("Build a boat", "Build a boat", function()
+
+ loadstring(game:HttpGet('https://raw.githubusercontent.com/XRoLLu/UWU/main/BUILD%20A%20BOAT%20FOR%20TREASURE.lua'))()
+
+end)
+
+MainSection:NewButton("Big PaintBall🔫", "ButtonInfo", function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+
+end)
+
+MainSection:NewButton("Tower of hell🗼", "ButtonInfo", function()
+
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/TwomadJR/nto/main/admiin"))()
+
+end)
+
+MainSection:NewButton("Chous🔪", "ButtonInfo", function()
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/1111-ssss/Chaos_Script/main/Chaos_script.txt'))()
+
+end)
+
+MainSection:NewButton("Making meme at 3 am ", "ButtonInfo", function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ToraIsMe2/ToraIsMe2/main/0making", true))()
+
+end)
+
+MainSection:NewButton("Pet sim x🐶", "ButtonInfo", function()
+
+  getgenv().key = "projectWBIsAwesomeG8J7GJ678PY"
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Muhammad6196/Project-WD/main/Main.lua"))()
+
+end)
+
+MainSection:NewButton("Ro Goul", "ButtonInfo", function()
+
+ loadstring(game:HttpGet"https://raw.githubusercontent.com/xQuartyx/DonateMe/main/ScriptLoader")()
+
+end)
+
+MainSection:NewButton("Meep City", "ButtonInfo", function()
+
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/synolope/mpcity/main/mainscript.lua",true))() 
+
+end)
+
+MainSection:NewButton("Break in", "ButtonInfo", function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TrixAde/Proxima-Hub/main/Main.lua"))()
+
+end)
+
+OtherSection:NewButton("Moon Gui", "ButtonInfo", function()
+
+  loadstring(game:HttpGet('https://raw.githubusercontent.com/IlikeyocutgHAH12/MoonUI-v10-/main/MoonUI%20v10'))()
+
+end)
+
+OtherSection:NewButton("Animation Gui", "ButtonInfo", function()
+
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Animation-Hub/main/Animation%20Gui", true))()
+
+end)
+
+MainSection:NewButton("Infectious smile", "ButtonInfo", function()
+
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Nicuse/RobloxScripts/main/InfectiousSmile.lua", true))()
+
+end)
+
+MainSection:NewButton("Legend of speed", "ButtonInfo", function()
+
+   local children = workspace.Hoops:GetChildren()
+
+for i, child in ipairs(children) do
+
+    if child.Name == "Hoop" then 
+
+child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+
+    end    
+
+end
+
+end)
+
